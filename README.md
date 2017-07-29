@@ -7,7 +7,7 @@ A lot of examples are grabbed from popular open source. For Longer Vision Techno
 
 2) [Arduino Step by Step online course](https://github.com/futureshocked/arduino_sbs)
 
-3) [Commercial course contents coming with the Sensor Kit for Arduino (37 sensors)](http://www.longervisionrobot.com/en/products/iot-sensors.html)
+3) [Longer Vision Robot's Course **Robotic Vehicles**](http://www.longervisionrobot.com/en/courses/robotics-vehicles.html)
 
 
 Every example starts with two digits "XY" and a underscore "_", which is to be used in the XYth class.
