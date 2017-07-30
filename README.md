@@ -10,7 +10,7 @@ A lot of examples are grabbed from popular open source. For Longer Vision Techno
 3) [Longer Vision Robot's Course **Robotic Vehicles**](http://www.longervisionrobot.com/en/courses/robotics-vehicles.html)
 
 
-Every example starts with two digits "XY" and a underscore "_", which is to be used in the XYth class.
-For instance, 02_TemperatureHumidity_DHT11.ino is to be used in the 2nd class.
+Every example starts with an underscore "_", two digits "XY" and another underscore "_", which is to be used in the XYth class.
+For instance, _02_TemperatureHumidity_DHT11.ino is to be used in the 2nd class.
 
 
