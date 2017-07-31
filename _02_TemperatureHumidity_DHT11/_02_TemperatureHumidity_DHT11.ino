@@ -44,5 +44,5 @@ void loop() {
     Serial.print(t);
     Serial.println(" *C");
   }
-    delay(5000);  //Insert a 5sec delay between readings
+    delay(2000);  //Insert a 5sec delay between readings
 }
