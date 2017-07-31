@@ -94,6 +94,21 @@ void digital_8(void)
     digitalWrite(j,LOW);
   digitalWrite(dp,HIGH);
 }
+//显示数字9
+void digital_9(void)
+{
+  unsigned char j;
+  for(j=5;j<=9;j++)
+    digitalWrite(j,LOW);
+  digitalWrite(e,HIGH);
+  digitalWrite(f,LOW);
+}
+//显示数字0
+void digital_0(void)
+{
+  unsigned char j;
+  
+}
 void setup()
 {
   int i;//定义变量
@@ -119,7 +134,9 @@ void loop()
     digital_7();
     delay(2000);
     digital_8();
-    delay(2000);   
+    delay(2000);
+    digital_9();
+    delay(2000);
   }
 }
 
