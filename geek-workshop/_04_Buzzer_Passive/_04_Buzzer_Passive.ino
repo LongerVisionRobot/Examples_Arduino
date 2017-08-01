@@ -1,25 +1,25 @@
-int buzzer=7;//设置控制蜂鸣器的数字IO脚
+int buzzer=7;//set buzzer IO pin as 7
 void setup()
 {
-  pinMode(buzzer,OUTPUT);//设置数字IO脚模式，OUTPUT为输出
+  pinMode(buzzer,OUTPUT);//set pin 7 as mode OUTPUT
 }
 void loop()
 {
-  unsigned char i,j;//定义变量
+  unsigned char i,j;//declare variables
   while(1)
   {
-    for(i=0;i<80;i++)//输出一个频率的声音
+    for(i=0;i<80;i++)//output a buzz at frequency 1
     {
-      digitalWrite(buzzer,HIGH);//发声音
+      digitalWrite(buzzer,HIGH);//HIGH - output a buzz
       delay(1);//延时1ms
-      digitalWrite(buzzer,LOW);//不发声音
+      digitalWrite(buzzer,LOW);//LOW - no buzz
       delay(1);//延时ms
     }
-    for(i=0;i<100;i++)//输出另一个频率的声音
+    for(i=0;i<100;i++)//output a buzz at frequency 2
     {
-      digitalWrite(buzzer,HIGH);//发声音
+      digitalWrite(buzzer,HIGH);//HIGH - output a buzz
       delay(2);//延时2ms
-      digitalWrite(buzzer,LOW);//不发声音
+      digitalWrite(buzzer,LOW);//LOW - no buzz
       delay(2);//延时2ms
     }
   }

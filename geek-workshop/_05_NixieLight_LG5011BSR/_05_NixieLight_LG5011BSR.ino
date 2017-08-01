@@ -1,4 +1,4 @@
-//设置控制各段的数字IO脚，具体几号引脚对应哪一段，来源为数码管官方引脚图。
+//set IO pins according to LG5011BSR's schematics
 int a=7;
 int b=6;
 int c=5;
@@ -8,17 +8,17 @@ int f=8;
 int g=9;
 int dp=4;
 
-//显示数字1
+//display digit 1
 void digital_1(void)
 {
   unsigned char j;
-  digitalWrite(c,LOW);//给数字5引脚低电平，点亮c段
-  digitalWrite(b,LOW);//点亮b段
-  for(j=7;j<=11;j++)//熄灭其余段
+  digitalWrite(c,LOW);//LOW - to light up pin 5 (c=5)
+  digitalWrite(b,LOW);//LOW - to light up pin 6 (b=6)
+  for(j=7;j<=11;j++)//HIGH - to turn off 7~11 (a,f,g,e,d)
     digitalWrite(j,HIGH);
-  digitalWrite(dp,HIGH);//熄灭小数点DP段
+  digitalWrite(dp,HIGH);//HIGH - to turn off dp (dp=4)
 }
-//显示数字2
+//display digit 2
 void digital_2(void)
 {
   unsigned char j;
@@ -30,7 +30,7 @@ void digital_2(void)
   digitalWrite(c,HIGH);
   digitalWrite(f,HIGH);
 }
-//显示数字3
+//display digit 3
 void digital_3(void)
 {
   unsigned char j;
@@ -42,7 +42,7 @@ void digital_3(void)
   digitalWrite(f,HIGH);
   digitalWrite(e,HIGH);
 }
-//显示数字4
+//display digit 4
 void digital_4(void)
 {
   digitalWrite(c,LOW);
@@ -54,7 +54,7 @@ void digital_4(void)
   digitalWrite(e,HIGH);
   digitalWrite(d,HIGH);   
 }
-//显示数字5
+//display digit 5
 void digital_5(void)
 {
   unsigned char j;
@@ -66,7 +66,7 @@ void digital_5(void)
   digitalWrite(b,HIGH);
   digitalWrite(e,HIGH); 
 }
-//显示数字6
+//display digit 6
 void digital_6(void)
 {
   unsigned char j;
@@ -76,7 +76,7 @@ void digital_6(void)
   digitalWrite(dp,HIGH);
   digitalWrite(b,HIGH);   
 }
-//显示数字7
+//display digit 7
 void digital_7(void)
 {
   unsigned char j;
@@ -86,7 +86,7 @@ void digital_7(void)
   for(j=8;j<=11;j++)
     digitalWrite(j,HIGH);
 }
-//显示数字8
+//display digit 8
 void digital_8(void)
 {
   unsigned char j;
@@ -94,7 +94,7 @@ void digital_8(void)
     digitalWrite(j,LOW);
   digitalWrite(dp,HIGH);
 }
-//显示数字9
+//display digit 9
 void digital_9(void)
 {
   unsigned char j;
@@ -103,7 +103,7 @@ void digital_9(void)
   digitalWrite(e,HIGH);
   digitalWrite(f,LOW);
 }
-//显示数字0
+//display digit 0
 void digital_0(void)
 {
   unsigned char j;
@@ -111,16 +111,16 @@ void digital_0(void)
 }
 void setup()
 {
-  int i;//定义变量
+  int i;//variable definition
   for(i=4;i<=11;i++)
-    pinMode(i,OUTPUT);//设置4～11引脚为输出模式
+    pinMode(i,OUTPUT);//set pin 4~11 as mode OUTPUT
 }
 void loop()
 {  
   while(1)
   {
-    digital_1();//数字1
-    delay(2000);//延时2s
+    digital_1();//digital 1
+    delay(2000);//delay 2 seconds
     digital_2();
     delay(2000);
     digital_3();

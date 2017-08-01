@@ -1,4 +1,4 @@
-//设置控制Led的数字IO脚
+//define Led IO pin
 int Led1 = 1;
 int Led2 = 2;
 int Led3 = 3;
@@ -6,7 +6,7 @@ int Led4 = 4;
 int Led5 = 5;
 int Led6 = 6;
 
-//led灯花样显示样式1子程序
+//Led water light style 1 
 void style_1(void)
 {
   unsigned char j;
@@ -25,12 +25,12 @@ void style_1(void)
 void setup()
 {
   unsigned char i;
-  for(i=1; i<=6; i++)//依次设置1~6个数字引脚为输出模式
-    pinMode(i, OUTPUT);//设置第i个引脚为输出模式
+  for(i=1; i<=6; i++)//set pin 1~6 as output mode in order
+    pinMode(i, OUTPUT);//set pin i as output mode
 }
 
 void loop()
 {
-  style_1(); //样式1
+  style_1(); //style 1
 }
 

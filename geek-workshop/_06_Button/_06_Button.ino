@@ -1,17 +1,17 @@
-int key=7;//设置LED的数字IO脚
+int key=7;//set LED pin IO
 void setup()
 {
-  pinMode(key,OUTPUT);//设置数字IO引脚为输出模式
+  pinMode(key,OUTPUT);//set IO pin mode as OUTPUT
 }
 void loop()
 {
-  int i;//定义变量
+  int i;//variable definition
   while(1)
   {
-    i=analogRead(5);//读取模拟5口电压值
-    if(i>1000)//如果电压值大于1000（即4.88V）
-      digitalWrite(key,HIGH);//设置第七引脚为高电平，点亮led灯
+    i=analogRead(5);//Read analog data from analog pin 5
+    if(i>1000)//if the reading data is bigger than 1000 (namely, 4.88Volt)
+      digitalWrite(key,HIGH);//Set the 7th pin as HIGH, light up LED
     else
-      digitalWrite(key,LOW);//设置第七引脚为低电平，熄灭led灯 
+      digitalWrite(key,LOW);//Set the 7th pin as LOW, turn off LED
   }
 }
