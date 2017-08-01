@@ -7,7 +7,9 @@ A lot of examples are grabbed from popular open source. For Longer Vision Techno
 
 2) [Arduino Step by Step online course](https://github.com/futureshocked/arduino_sbs)
 
-3) [Longer Vision Robot's Course **Robotic Vehicles**](http://www.longervisionrobot.com/en/courses/robotics-vehicles.html)
+3) [Arduino学习笔记](http://www.geek-workshop.com/portal.php?mod=list&catid=1)
+
+4) [Longer Vision Robot's Course **Robotic Vehicles**](http://www.longervisionrobot.com/en/courses/robotics-vehicles.html)
 
 
 Every example starts with an underscore "_", two digits "XY" and another underscore "_", which is to be used in the XYth class.
