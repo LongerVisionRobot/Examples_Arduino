@@ -1,7 +1,7 @@
 int sensorPin = 2;
 int value = 0;
 void setup() {
-  pinMode(sensorPin, INPUT);
+  pinMode(sensorPin, OUTPUT);
   Serial.begin(9600);
 }
 void loop() {
