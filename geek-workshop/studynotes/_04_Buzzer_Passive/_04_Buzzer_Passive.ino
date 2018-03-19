@@ -1,26 +1,26 @@
-int buzzer=7;//set buzzer IO pin as 7
+int buzzer=8; // Set buzzer IO pin, here 8
 void setup()
 {
-  pinMode(buzzer,OUTPUT);//set pin 7 as mode OUTPUT
+  pinMode(buzzer,OUTPUT); // set buzzer pin as output
 }
 void loop()
 {
-  unsigned char i,j;//declare variables
+  unsigned char i,j;  // Variable Definition
   while(1)
   {
-    for(i=0;i<80;i++)//output a buzz at frequency 1
+    for(i=0;i<80;i++) // broadcast a noise at one frequency
     {
-      digitalWrite(buzzer,HIGH);//HIGH - output a buzz
-      delay(1);//延时1ms
-      digitalWrite(buzzer,LOW);//LOW - no buzz
-      delay(1);//延时ms
+      digitalWrite(buzzer,HIGH);  // start buzzing
+      delay(1); // delay 1ms
+      digitalWrite(buzzer,LOW);   // stop buzzing
+      delay(1); // delay 1ms
     }
-    for(i=0;i<100;i++)//output a buzz at frequency 2
+    for(i=0;i<100;i++)  // broadcast a noise at the other frequency
     {
-      digitalWrite(buzzer,HIGH);//HIGH - output a buzz
-      delay(2);//延时2ms
-      digitalWrite(buzzer,LOW);//LOW - no buzz
-      delay(2);//延时2ms
+      digitalWrite(buzzer,HIGH);  // start buzzing
+      delay(2); // delay 2ms
+      digitalWrite(buzzer,LOW);   // stop buzzing
+      delay(2); // delay 2ms
     }
   }
 }

@@ -1,16 +1,16 @@
-int Led=13;//定义LED 接口
-int Shock=3;//定义震动传感器接口
-int val;//定义数字变量val
+int Led=13;     // Define LDE Pin
+int tap=3;      // Define pin for tap sensor
+int val;        // Define Variable val
 void setup()
 {
-  pinMode(Led,OUTPUT);//定义LED 为输出接口
-  pinMode(Shock,INPUT);//定义震动传感器为输入接口
+  pinMode(Led,OUTPUT);  // Define LED as output
+  pinMode(tap,INPUT);   // Define tap sensor as input
 }
 
 void loop()
 {
-  val=digitalRead(Shock);//将数字接口3的值读取赋给val
-  if(val==HIGH)//当震动传感器检测有信号时,LED 闪烁
+  val=digitalRead(tap); // assign digital pin 3's reading to val
+  if(val==HIGH) // anything detected by tap sensor, LED starts
   {
     digitalWrite(Led,LOW);
   }
