@@ -13,7 +13,7 @@ void setup()
   delay(1000); //delay 1000ms
 }
 
-void loop ()                     
+void loop ()
 {
   val = analogRead(potPin);             //val变量为从LM35信号口读取到的数值
   temperature = (val*0.0048828125*1000);         //把读取到的val转换为温度数值的10倍
