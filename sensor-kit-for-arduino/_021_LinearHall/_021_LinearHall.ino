@@ -1,17 +1,17 @@
-int Led=13;//定义LED 接口
-int buttonpin=3; //定义线性霍尔磁力传感器接口
-int val;//定义数字变量val
+int Led=13;       // Define LDE Pin
+int buttonpin=3;  // Define linear hall sensor's pin
+int val;          // Define Variable val
 void setup()
 {
-  pinMode(Led,OUTPUT);//定义LED 为输出接口
-  pinMode(buttonpin,INPUT);//定义线性霍尔磁力传感器为输出接口
+  pinMode(Led,OUTPUT);  // Define LED as output
+  pinMode(buttonpin,INPUT); // Define linear hall sensor as input
   Serial.begin(9600);
 }
 void loop()
 {
-  val=digitalRead(buttonpin);//将数字接口3的值读取赋给val
+  val=digitalRead(buttonpin); // assign digital pin 3's reading to val
   Serial.println(val);
-  if(val==HIGH)//当线性霍尔磁力传感器检测有信号时，LED 闪烁
+  if(val==HIGH) // anything detected by linear hall sensor, LED starts flashing
   {
     digitalWrite(Led,HIGH);
   }

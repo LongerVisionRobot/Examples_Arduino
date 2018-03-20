@@ -1,15 +1,15 @@
-int Led=13;//定义LED 接口
-int buttonpin=3; //定义火焰传感器接口
-int val;//定义数字变量val
+int Led=13;       // Define LDE Pin
+int buttonpin=3;  // Define Flame Sensor Pin
+int val;          // Define Variable val
 void setup()
 {
-  pinMode(Led,OUTPUT);//定义LED 为输出接口
-  pinMode(buttonpin,INPUT);//定义火焰传感器为输出接口
+  pinMode(Led,OUTPUT); // Define LED as output
+  pinMode(buttonpin,INPUT); // Define flame detector as input
 }
 void loop()
 {
-  val=digitalRead(buttonpin);//将数字接口3的值读取赋给val
-  if(val==HIGH)//当火焰传感器检测有信号时，LED 闪烁
+  val=digitalRead(buttonpin);// Assign digitl pin's reading to val
+  if(val==HIGH)   // If flame detected, LED starts flashing
   {
     digitalWrite(Led,HIGH);
   }

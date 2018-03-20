@@ -1,12 +1,12 @@
-int relay = 10; //继电器导通触发信号-高电平有效;
+int relay = 10; // Define relay pin
 void setup()
 {
-  pinMode(relay,OUTPUT); //定义端口属性为输出;
+  pinMode(relay,OUTPUT); // Define relay pin as output
 }
 void loop()
 {
-  digitalWrite(relay,HIGH); //继电器导通;
+  digitalWrite(relay,HIGH); // Relay open
   delay(1000);
-  digitalWrite(relay,LOW); //继电器开关断开;
+  digitalWrite(relay,LOW);  // Relay close
   delay(1000);
 }

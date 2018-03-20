@@ -27,8 +27,8 @@ void loop()
   { 
    brightness --;
   } 
-    analogWrite(LedPinA, brightness);  //  A慢漸暗
-    analogWrite(LedPinB, 255 - brightness);  // B慢漸亮
+    analogWrite(LedPinA, brightness);       // A turns dark slowly
+    analogWrite(LedPinB, 255 - brightness); // B turns bright slowly
     delay(25);
 }
 
