@@ -1,7 +1,7 @@
-int rightMotor1 = 14;
-int rightMotor2 = 15;
-int leftMotor1 = 16;
-int leftMotor2 = 17;
+int rightMotor1 = 17;
+int rightMotor2 = 18;
+int leftMotor1 = 13;
+int leftMotor2 = 14;
 
 int leftPWM = 5;
 int rightPWM = 6;
@@ -21,8 +21,9 @@ void loop() {
   analogWrite(leftPWM, 250);  // Set PWM output, namely, setup speed
   analogWrite(rightPWM, 250);
 
-  digitalWrite(leftMotor1, LOW);
+  digitalWrite(leftMotor1, HIGH);
   digitalWrite(leftMotor2, HIGH);
-  digitalWrite(rightMotor1, LOW);
+  digitalWrite(rightMotor1, HIGH);
   digitalWrite(rightMotor2, HIGH);
+
 }
